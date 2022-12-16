@@ -13,14 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('companies', function (Blueprint $table) {
+        Schema::create('blacklist', function (Blueprint $table) {
             $table->id();
-            $table->string("name");
-            $table->string("email")->unique();
-            $table->string("password");
-            $table->string("description");
-            // $table->boolean("hiring");
+            $table->unsignedBigInteger("blacklisted_id");
+            $table->unsignedBigInteger("employer_id");
             $table->timestamps();
+
+            $table->foreign('blacklisted_id')->references('id')->on('users');
+            $table->foreign('employer_id')->references('id')->on('users');
         });
     }
 
@@ -31,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('companies');
+        Schema::dropIfExists('blacklist');
     }
 };

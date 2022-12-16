@@ -19,9 +19,9 @@ return new class extends Migration
             $table->string("tags");
             $table->string("description");
             $table->string("requirements");
-            $table->unsignedBigInteger('company_id');
+            $table->unsignedBigInteger('creator_id');
 
-            $table->foreign('company_id')->references('id')->on('companies');
+            $table->foreign('creator_id')->references('id')->on('users');
 
             $table->timestamps();
         });
