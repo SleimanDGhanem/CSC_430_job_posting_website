@@ -6,9 +6,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- axios script -->
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="../js/post_job.js"></script>
+  <link rel="stylesheet" href="../css/login.css">
+  <link rel="stylesheet" href="../css/post_job.css">
   <title>Document</title>
 </head>
-<body>
-  
-</body>
+<div>
+  <h3>Please enter your information</h3>
+  <form id="form">
+    <label for="title">Please Enter a Title</label>
+    <input type="text" name="title" id="title" />
+    <label for="email">Please Enter a contact email</label>
+    <input type="email" name="email" id="email" />
+    <input type="checkbox" name="skills" id="web" value="web">Web Development
+    <input type="checkbox" name="skills1" id="data" value="data">Data Science
+    <input type="checkbox" name="skills2" id="software" value="software">Software Engineer
+
+    <label for="description">Description</label>
+    <textarea name="description" id="description" ></textarea>
+    
+    <input type="submit" value="login" class="submit">
+  </form>
+</div>
 </html>

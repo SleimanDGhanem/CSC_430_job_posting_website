@@ -12,13 +12,13 @@ window.onload = () => {
 
     try {
       const res = await axios.post(
-        "http://localhost:8000/api/login",
+        "http://localhost:8000/api/post",
         formData
       );
       console.log(res);
-      window.location.href = "post_job.html"
-    } catch (e) {
-      console.log(e);
+      window.location.href = "personal.html"
+    } catch (error) {
+      console.log(error.response.data);
     }
   });
 };
