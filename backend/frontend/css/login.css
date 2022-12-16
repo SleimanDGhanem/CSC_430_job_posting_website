@@ -39,7 +39,7 @@ input{
   height: 2vh;
   border-radius: 5px;
 }
-[type="button"]{
+.submit{
   width: 4vw;
   margin: auto;
   margin-top: 2vh;

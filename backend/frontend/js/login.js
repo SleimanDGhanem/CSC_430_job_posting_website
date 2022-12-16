@@ -12,13 +12,13 @@ window.onload = () => {
 
     try {
       const res = await axios.post(
-        "http://localhost/Instagram_like_website/Backend/login.php",
+        "http://localhost:8000/api/login",
         formData
       );
       console.log(res);
-      window.location.href = "html/addImage.html"
+      window.location.href = "register.html"
     } catch (e) {
-      console.log(error);
+      console.log(e);
     }
   });
 };
