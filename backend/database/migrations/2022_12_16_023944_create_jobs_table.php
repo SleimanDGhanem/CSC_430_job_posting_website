@@ -17,11 +17,9 @@ return new class extends Migration
             $table->id();
             $table->string("title");
             $table->string("tags");
+            $table->string("email");
             $table->string("description");
             $table->string("requirements");
-            $table->unsignedBigInteger('creator_id');
-
-            $table->foreign('creator_id')->references('id')->on('users');
 
             $table->timestamps();
         });
