@@ -1,0 +1,51 @@
+body{
+  background-color: #5652B1;
+  font-family: Helvetica, 'Courier New', Courier, monospace;
+}
+h1{
+  margin:auto;
+  margin-top: 10vh;
+  margin-bottom: 5vh;
+  text-align: center;
+  color: antiquewhite;
+
+}
+
+div{
+
+  background-color: rgb(216, 192, 248);
+  margin: auto;
+  width: 20vw;
+  padding: 1vw;
+  border-radius: 4px;
+  min-width: 200px;
+
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  /* color: antiquewhite; */
+}
+input{
+  margin: 1vh 0;
+
+}
+label{
+  margin: 0.5vh 0;
+}
+input{
+  border: solid 1px grey;
+  height: 2vh;
+  border-radius: 5px;
+}
+.submit{
+  width: 4vw;
+  margin: auto;
+  margin-top: 2vh;
+  padding: 0.2vw 1vw;
+  background-color: rgb(152, 222, 252);
+  border: none;
+  border-radius: 4px;
+  min-width: 40px;
+}
