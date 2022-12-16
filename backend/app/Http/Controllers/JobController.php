@@ -48,4 +48,8 @@ class JobController extends Controller
             'message' => 'Job posted successfully'
         ]);
     }
+    public function get_jobs(){
+        $jobs = Job::all();
+        return json_encode($jobs);
+    }
 }

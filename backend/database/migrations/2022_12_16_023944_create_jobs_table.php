@@ -19,7 +19,6 @@ return new class extends Migration
             $table->string("tags");
             $table->string("email");
             $table->string("description");
-            $table->string("requirements");
 
             $table->timestamps();
         });
