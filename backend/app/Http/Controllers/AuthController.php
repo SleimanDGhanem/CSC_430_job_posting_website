@@ -46,17 +46,33 @@ class AuthController extends Controller
     public function register(Request $request){
         $request->validate([
             'name' => 'required|string|max:255',
-            'email' => 'required|email|max:255'|'unique:users',
+            'email' => 'required|email|max:255|unique:users',
             'password' => 'required|string',
             'description' => 'required|string|max:255'
         ]);
+        if(isset($request->skills)){
+            $tags = $request->skills;
+        }
+        if(isset($request->skills1) && isset($tags)){
+            $tags = $tags.','.$request->skills1;
+        }
+        else if(isset($request->skills1)){
+            $tags = $request->skills1;
+        }
+        if(isset($request->skills2) && isset($tags)){
+            $tags = $tags.','.$request->skills2;
+        }
+        else if(isset($request->skills2)){
+            $tags = $request->skills2;
+        }
 
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
             'description' => $request->description,
-            'tags' => "",
+            'tags' => $tags
+
         ]);
 
         $token = Auth::login($user);
