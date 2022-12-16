@@ -1,0 +1,17 @@
+.feed{
+  width:30vw;
+}
+.post{
+  border-bottom: solid 2px black;
+}
+a, .link{
+  text-align: center;
+  margin: auto;
+  text-decoration: none;
+  color: black;
+}
+a{
+  border: solid 1px red;
+  border-radius: 4px;
+  padding: 10px;
+}
