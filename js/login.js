@@ -16,7 +16,7 @@ window.onload = () => {
         formData
       );
       console.log(res);
-      window.location.href = "post_job.html"
+      window.location.href = "personal.html"
     } catch (e) {
       console.log(e);
     }
